@@ -1,5 +1,5 @@
 // Models/TutoringCalculatorModel.cs
-namespace Mission5WebApp.Models
+namespace Mission5Test.Models
 {
     public class TutoringCalculatorModel
     {

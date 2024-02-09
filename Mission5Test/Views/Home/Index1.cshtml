@@ -1,0 +1,121 @@
+﻿@model Mission5Test.Models.TutoringCalculatorModel
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Caroline Tobler | My Hobbies</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+
+        <!-- =======================================================
+        * Template Name: MyResume
+        * Updated: Jan 29 2024 with Bootstrap v5.3.2
+        * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+        * Author: BootstrapMade.com
+        * License: https://bootstrapmade.com/license/
+        ======================================================== -->
+        <style>
+            .icon-box img {
+                max-width: 100%; /* ensures the image is never wider than the container */
+                height: auto; /* maintains the aspect ratio */
+                display: block; /* removes any extra space below the image */
+            }
+
+            h1, .typed {
+                color: black;
+            }
+
+        .calculator-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator-container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            width: fit-content;
+            margin: auto; /* Centers the container in the middle of the page */
+        }
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- ======= Mobile nav toggle button ======= -->
+        <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+        <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+        <!-- ======= Header ======= -->
+        <header id="header" class="d-flex flex-column justify-content-center">
+
+        </header><!-- End Header -->
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="d-flex flex-column justify-content-center">
+            
+        </section><!-- End Hero -->
+
+    <div class="calculator-wrapper">
+        <div class="calculator-container">
+            <h2>Tutoring Pricing Calculator</h2>
+
+            <br>
+
+            <div>
+                <label for="hoursInput">Number of Hours:</label>
+                <input type="number" id="hoursInput" name="hoursInput" min="1" step="1" required />
+                <span id="validationMessage" style="color: red;"></span>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="ratePerHour">Rate per Hour:</label>
+                <input type="text" id="ratePerHour" name="ratePerHour" value="@Model.Rate" readonly />
+            </div>
+
+            <br>
+
+            <div>
+                <button id="calculateButton" type="button">Calculate Total</button>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="totalOutput">Total:</label>
+                <input type="text" id="totalOutput" name="totalOutput" readonly />
+            </div>
+        </div>
+    </div>
+    @section Scripts {
+        <script src="~/js/calculator.js" asp-append-version="true"></script>
+    }
+    </body>
+</html>

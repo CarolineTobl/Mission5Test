@@ -15,12 +15,12 @@ namespace Mission5Test.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(); 
         }
-
-        public IActionResult Privacy()
+        public IActionResult Index1()
         {
-            return View();
+            var model = new TutoringCalculatorModel(); // Initializes your model
+            return View(model); // Pass the model to the view
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
